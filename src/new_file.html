@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	
+	<script type="text/javascript">
+		/*
+		 * 两数之和
+		 * 来源：https://leetcode-cn.com/problems/two-sum
+		 */
+		//132ms 33.6mb
+		var twoSum = function(nums, target) {
+		    var len = nums.length -1;
+		    while(len != 0){
+		        var last = nums.pop();
+		        if(nums.indexOf(target - last) != -1){
+		            return [nums.indexOf(target - last), len];
+		        }
+		        len--;
+		    }
+		};
+		/*var twoSum = function(nums, target) {
+			for (let i = 0; i < nums.length; i++) {
+				const left = nums[i];
+				const copyNums = nums.slice(i + 1);
+				const right = (target - left);
+		
+				if (copyNums.indexOf(right) != -1) {
+					return [i, copyNums.indexOf(right) + i + 1];
+				}
+			}
+		}*/
+	</script>
+</html>
